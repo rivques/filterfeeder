@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/styles.css">
+    <title>Filter Feeder - RSS Feed Filter</title>
+    <script src="/static/index.js" defer></script>
+</head>
+<body>
+    <h1>Filter Feeder</h1>
+    <h3>by <a href="https://rivques.dev">rivques</a> | <a href="https://github.com/rivques/filterfeeder">View on GitHub</a></h3>
+    <p>Filter your RSS feeds by including or excluding specific terms. For when a podcast
+        puts things like previews of paid content in their feed, or similar.
+    </p>
+    
+    <form id="filterForm">
+        <div class="form-group">
+            <label for="feedUrl">RSS Feed URL:</label>
+            <input type="text" id="feedUrl" name="feedUrl" required>
+        </div>
+
+        <div class="form-group">
+            <label for="includeTerms">Include terms:</label>
+            <input type="text" id="includeTerms" name="includeTerms">
+        </div>
+
+        <div class="form-group">
+            <label for="excludeTerms">Exclude terms:</label>
+            <input type="text" id="excludeTerms" name="excludeTerms">
+        </div>
+    </form>
+
+    <div class="output-url">
+        <h3>Filtered Feed URL:</h3>
+        <p id="outputUrl">Your filtered feed URL will appear here</p>
+        <button id="copyButton">Copy to clipboard</button>
+    </div>
+
+</body>
+</html>

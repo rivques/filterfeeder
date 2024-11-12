@@ -1,0 +1,13 @@
+[Unit]
+Description=filterfeeder
+DefaultDependencies=no
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/home/rivques/filterfeeder/venv/bin/python /home/rivques/filterfeeder/main.py
+TimeoutStartSec=0
+WorkingDirectory=/home/rivques/filterfeeder
+
+[Install]
+WantedBy=default.target
